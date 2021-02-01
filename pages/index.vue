@@ -86,6 +86,7 @@ $white: #fff;
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -94,7 +95,6 @@ body {
   font-family: "Nunito Sans", sans-serif;
   overflow-x: hidden;
   color: $black;
-  scroll-behavior: smooth;
 }
 
 .navbar {
