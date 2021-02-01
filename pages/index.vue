@@ -106,6 +106,7 @@ body {
   width: 100%;
   padding: 2rem;
   border-bottom: 1px solid $black;
+  background-color: $white;
   z-index: 10;
 
   h1 {
@@ -122,6 +123,10 @@ body {
     align-items: center;
     font-size: 1.7rem;
     font-weight: 700;
+
+    ul:last-child {
+      border: 1px solid $black;
+    }
   }
 }
 .blank {
@@ -150,12 +155,13 @@ body {
 
   .title1 {
     position: absolute;
-    top: 50%;
-    right: 20%;
-    font-size: 4rem;
+    top: 60%;
+    right: 10%;
+    font-size: 5rem;
     transform: translate(-50%, -50%);
     color: $white;
     opacity: 0;
+    mix-blend-mode: difference;
     span {
       font-size: 3rem;
       font-weight: 400;
@@ -186,6 +192,7 @@ body {
     transform-origin: center center;
     text-align: center;
     line-height: 8rem;
+    mix-blend-mode: difference;
     span {
       font-size: 3rem;
       font-weight: 400;
