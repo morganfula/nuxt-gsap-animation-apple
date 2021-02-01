@@ -1,5 +1,7 @@
 # nuxt-gsap-animation-apple
 
+A scrolling animation inspired by apple.com using nuxt, GSAP, and scrollmagic
+
 ## Build Setup
 
 ```bash
