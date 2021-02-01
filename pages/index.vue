@@ -20,7 +20,40 @@ export default {
   },
   methods: {
     startAnimations: function() {
-      gsap.to("#title", { duration: 1, color: "red" });
+      let tl = new TimelineMax({ onUpdate: udpatePourcentage });
+
+      tl.to(".img1", 1, { width: "100%", height: "100%" }, 0);
+      tl.to(".title1", 0.5, { opacity: 1 }, 1);
+      tl.to(".title1", 0.5, { opacity: 0 }, 2);
+      tl.to(".img2", 1, { height: "100%" }, 2);
+      tl.from(".title2", 1, { opacity: 0 }, 2.2);
+      tl.to(".img1", 0, { opacity: 0 }, 3);
+      tl.to(
+        ".img2",
+        1,
+        {
+          width: "60%",
+          height: "60%",
+          transform: "translate(-30%, -30%)"
+        },
+        3
+      );
+      tl.to(".title2", 1, { color: "rgba(0,0,0,0)" }, 3);
+
+      const scene = this.$scrollmagic
+        .scene({
+          triggerElement: ".wrapper",
+          triggerHook: 0,
+          duration: "300%"
+        })
+        .setPin(".wrapper")
+        .setTween(tl);
+
+      this.$scrollmagic.addScene(scene);
+
+      function udpatePourcentage() {
+        tl.progress();
+      }
     }
   }
 };
@@ -59,7 +92,7 @@ body {
 }
 
 .wrapper {
-  background: red;
+  // background: red;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -80,7 +113,7 @@ body {
   .title1 {
     position: absolute;
     top: 50%;
-    left: 20%;
+    right: 20%;
     font-size: 4rem;
     transform: translate(-50%, -50%);
     color: $white;
@@ -109,12 +142,12 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 6rem;
+    font-size: 8rem;
     transform: translate(-50%, -50%);
     color: $white;
     transform-origin: center center;
     text-align: center;
-    line-height: 6rem;
+    line-height: 8rem;
     span {
       font-size: 3rem;
       font-weight: 400;
