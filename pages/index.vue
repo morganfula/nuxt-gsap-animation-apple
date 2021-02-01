@@ -1,6 +1,16 @@
 <template>
   <div>
     <div class="blank" />
+    <div class="navbar">
+      <h1>
+        Apple scroll
+      </h1>
+      <ul>
+        <li>Product</li>
+        <li>About Us</li>
+        <li>Buy</li>
+      </ul>
+    </div>
     <div class="wrapper">
       <div class="img1" />
       <h2 class="title1">Lorem ipsum<br /><span>Dolor sit amet.</span></h2>
@@ -84,8 +94,36 @@ body {
   font-family: "Nunito Sans", sans-serif;
   overflow-x: hidden;
   color: $black;
+  scroll-behavior: smooth;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  border-bottom: 1px solid $black;
+  z-index: 10;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    list-style: none;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+}
 .blank {
   width: 100%;
   height: 100vh;
