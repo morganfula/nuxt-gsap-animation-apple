@@ -3,7 +3,7 @@
 A scrolling animation inspired by apple.com using nuxt, GSAP, and scrollmagic
 
 ## snippet
-<img align="center" width="750" src="https://media.giphy.com/media/ZCef5S057gCbqDowt2/giphy.gif">
+<img align="center" width="650" src="https://media.giphy.com/media/ZCef5S057gCbqDowt2/giphy.gif">
 
 
 ## Build Setup
